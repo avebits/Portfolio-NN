@@ -1,1 +1,1 @@
-Just a minor webdesign test.
+Just a webdesign test.
