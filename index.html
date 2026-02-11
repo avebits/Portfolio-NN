@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Najib Nasery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-box"><img src="./logosmall.png"></div>
+  </div>
+
+  <nav>
+    <a href="#" data-section="hero" class="active">Hjem</a>
+    <a href="#" data-section="about">Om meg</a>
+    <a href="#" data-section="cv">CV</a>
+    <a href="#" data-section="projects">Projekter</a>
+    <a href="#" data-section="contact">Kontakt</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="section active hero-section">
+  <div class="hero">
+    <span class="badge">IT-student</span>
+    <h1>Hei, jeg er Najib Nasery.</h1>
+    <p>
+    Her kommer en portfolio med prosjekter, CV og kontaktinfo.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="primary" data-section="projects">Se prosjekter</button>
+      <button class="secondary" data-section="about">Om meg</button>
+    </div>
+  </div>
+</section>
+
+<!-- OM MEG -->
+<section id="about" class="section collapsible">
+  <div class="container">
+    <h2>Om meg</h2>
+    <p class="section-subtitle">
+      Hvem jeg er, hva jeg jobber med, og hva jeg lærer akkurat nå.
+    </p>
+
+    <!-- MAIN ABOUT CARD -->
+    <div class="card about-main">
+      <div class="about-photo">PHOTO</div>
+
+      <div class="about-content">
+        <span class="tag">IT-student</span>
+
+        <h3>Hvem jeg er</h3>
+        <p>
+          Jeg er IT-student med stor interesse for teknologi, problemløsning og
+          brukerstøtte. Jeg trives med å jobbe strukturert og lære nye systemer
+          og løsninger.
+        </p>
+
+        <h4>Hva jeg liker å jobbe med</h4>
+        <ul>
+          <li>Nettverk og IT-support</li>
+          <li>Feilsøking og konfigurasjon</li>
+          <li>Praktiske IT-prosjekter og labmiljø</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STYRKER -->
+    <div class="about-block">
+      <h3>Styrker</h3>
+      <p class="section-subtitle">
+        3 korte “cards” som beskriver hvordan du jobber.
+      </p>
+
+      <div class="strengths-grid">
+        <div class="card small">
+          <strong>Struktur</strong>
+          <p>
+            Jobber metodisk og dokumenterer løsninger for effektiv problemløsning.
+          </p>
+        </div>
+
+        <div class="card small">
+          <strong>Samarbeid</strong>
+          <p>
+            Trives i team og kommuniserer godt med både brukere og kollegaer.
+          </p>
+        </div>
+
+        <div class="card small">
+          <strong>Læring</strong>
+          <p>
+            Motiveres av å lære nye teknologier og utvikle ferdighetene mine.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KORT HISTORIE -->
+    <div class="about-block">
+      <h3>Kort historie</h3>
+      <p class="section-subtitle">
+        3–5 punkter. Enkelt, ikke langt.
+      </p>
+
+      <ul class="timeline">
+        <li><strong>2021</strong> – Startet med IT og grunnleggende support</li>
+        <li><strong>2022</strong> – Praktisk erfaring innen IT-support</li>
+        <li><strong>2023</strong> – Jobbet med feilsøking og brukerstøtte</li>
+        <li><strong>2024</strong> – IT-student, fokus på videre læring</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top: 2rem;">
+      <button class="primary" data-section="projects">Se prosjekter</button>
+      <button class="secondary" data-section="contact">Kontakt meg</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- CV -->
+<section id="cv" class="section collapsible">
+  <div class="container">
+    <h2>CV</h2>
+    <p class="section-subtitle">
+      IT-student med erfaring innen IT-support, feilsøking og kundeservice.
+    </p>
+
+    <!-- PROFIL + DETALJER -->
+    <div class="two-col">
+      <div class="card">
+        <h3>Profil</h3>
+        <ul>
+          <li>Erfaring med førstelinje IT-support</li>
+          <li>Grunnleggende nettverk og feilsøking</li>
+          <li>Strukturert og løsningsorientert</li>
+          <li>God kommunikasjon med brukere</li>
+        </ul>
+
+        <span class="tag">IT-support</span>
+      </div>
+
+      <div class="card">
+        <h3>Detaljer</h3>
+        <p><strong>E-post:</strong> najib@example.com</p>
+        <p><strong>Telefon:</strong> +47 000 00 000</p>
+        <p><strong>Sted:</strong> Drammen, Norge</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/najibnasery</p>
+        <p><strong>GitHub:</strong> github.com/najibnasery</p>
+      </div>
+    </div>
+
+    <!-- ERFARING -->
+    <div class="card">
+      <h3>Arbeidserfaring</h3>
+
+      <div class="experience">
+        <strong>IT-support / Servicedesk – Firma</strong><br>
+        <span>2022 – 2023</span>
+        <ul>
+          <li>Brukerstøtte via telefon og e-post</li>
+          <li>Feilsøking av maskinvare og programvare</li>
+          <li>Oppsett av PC, brukere og tilgang</li>
+          <li>Dokumentasjon av saker</li>
+        </ul>
+      </div>
+
+      <div class="experience" style="margin-top: 1.5rem;">
+        <strong>Praksis / Deltidsrolle – Firma</strong><br>
+        <span>2021 – 2022</span>
+        <ul>
+          <li>Installasjon og klargjøring av IT-utstyr</li>
+          <li>Enkel nettverksfeilsøking</li>
+          <li>Support til interne brukere</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- UTDANNING + FERDIGHETER -->
+    <div class="two-col">
+      <div class="card">
+        <h3>Utdanning</h3>
+        <p><strong>IT-studier / Program</strong></p>
+        <p>År – År</p>
+
+        <ul>
+          <li>Grunnleggende nettverk</li>
+          <li>Operativsystemer</li>
+          <li>IT-sikkerhet (grunnleggende)</li>
+        </ul>
+
+        <span class="tag">Kurs / Sertifikat</span>
+      </div>
+
+      <div class="card">
+        <h3>Ferdigheter</h3>
+
+        <div class="skill-tags">
+          <span>Nettverk</span>
+          <span>Feilsøking</span>
+          <span>Kundeservice</span>
+        </div>
+
+        <ul style="margin-top: 1rem;">
+          <li>Windows / grunnleggende Linux</li>
+          <li>Microsoft 365</li>
+          <li>Maskinvareoppsett</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA BUTTONS -->
+    <div style="margin-top: 2rem;">
+      <button id="downloadPdf" class="primary">Last ned PDF</button>
+      <button class="secondary" data-section="contact">Kontakt meg</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section collapsible">
+  <div class="container">
+    <h2>Prosjekter</h2>
+    <p class="section-subtitle">
+      Velg et prosjekt for å se GitHub og eventuell live demo.
+    </p>
+
+    <!-- FILTERS (VISUAL ONLY FOR NOW) -->
+    <div class="filter-bar">
+      <span class="tag">Alle</span>
+      <span class="tag">Web</span>
+      <span class="tag">Nettverk</span>
+      <span class="tag">Annet</span>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <div class="projects-grid">
+      <div class="card project-card">
+        <h3>Prosjekt 1</h3>
+        <p>Enkel portfolio-side bygget med HTML og CSS.</p>
+        <span class="tag">HTML / CSS</span>
+
+        <div class="project-actions">
+  <a href="#" class="secondary">GitHub</a>
+  <a href="#" class="primary">Live</a>
+</div>
+      </div>
+
+      <div class="card project-card">
+        <h3>Prosjekt 2</h3>
+        <p>Grunnleggende nettverksoppsett i labmiljø.</p>
+        <span class="tag">Nettverk</span>
+
+      <div class="project-actions">
+  <a href="#" class="secondary">GitHub</a>
+  <a href="#" class="primary">Live</a>
+</div>
+      </div>
+
+      <div class="card project-card">
+        <h3>Prosjekt 3</h3>
+        <p>Azure-lab med virtuelle maskiner og nettverk.</p>
+        <span class="tag">Azure</span>
+
+        <div class="project-actions">
+  <a href="#" class="secondary">GitHub</a>
+  <a href="#" class="primary">Live</a>
+</div>
+      </div>
+
+      <div class="card project-card">
+        <h3>Prosjekt 4</h3>
+        <p>Python-script for enkel automatisering.</p>
+        <span class="tag">Python</span>
+
+        <div class="project-actions">
+  <a href="#" class="secondary">GitHub</a>
+  <a href="#" class="primary">Live</a>
+</div>
+      </div>
+
+      <div class="card project-card">
+        <h3>Prosjekt 5</h3>
+        <p>Linux-serveroppsett og brukerstyring.</p>
+        <span class="tag">Linux</span>
+
+        <div class="project-actions">
+  <a href="#" class="secondary">GitHub</a>
+  <a href="#" class="primary">Live</a>
+</div>
+      </div>
+
+      <div class="card project-card">
+        <h3>Prosjekt 6</h3>
+        <p>Kommende prosjekt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section collapsible">
+  <div class="container">
+    <h2>Kontakt</h2>
+
+    <div class="two-col">
+      <div class="card">
+        <p>E-post: lorem@ipsum.com</p>
+      </div>
+
+      <div class="card">
+        <form>
+          <input type="text" placeholder="Navn">
+          <input type="email" placeholder="E-post">
+          <textarea placeholder="Melding"></textarea>
+          <button class="primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Najib Nasery
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
