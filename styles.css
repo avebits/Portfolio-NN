@@ -192,6 +192,11 @@ button.primary {
 .about-content h3,
 .about-content h4 {
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-block {
+  margin-top: 1.5rem;
 }
 
 /* FORMS */
