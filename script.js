@@ -108,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const address = user + "@" + domain;
 
     window.location.href = `mailto:${address}?subject=${subject}&body=${body}`;
+    form.reset();
   });
 
 });
+
