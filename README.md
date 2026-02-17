@@ -1,1 +1,1 @@
-Just a webdesign test.
+A webdesign test for a fictitious customer.
