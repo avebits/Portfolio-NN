@@ -26,6 +26,8 @@
 <section id="hero" class="section active hero-section">
   <div class="hero">
     <span class="badge">IT-student</span>
+    <span class="badge">Basejumper</span>
+    <span class="badge">Tesla-racer</span>
     <h1>Hei, jeg er Najib Nasery.</h1>
     <p>
     Her kommer en portfolio med prosjekter, CV og kontaktinfo.
@@ -157,7 +159,7 @@
       </div>
     </div>
 
-    <!-- ERFARING -->
+    <!-- ARBEIDSERFARING -->
     <div class="card">
       <h3>Arbeidserfaring</h3>
 
@@ -318,16 +320,17 @@
       </div>
 
       <div class="card">
-        <form>
-          <input type="text" placeholder="Navn">
-          <input type="email" placeholder="E-post">
-          <textarea placeholder="Melding"></textarea>
-          <button class="primary">Send</button>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Navn" required>
+          <input type="email" id="emailInput" placeholder="E-post" required>
+          <textarea id="message" placeholder="Melding" required></textarea>
+          <button type="submit" class="primary">Send epost</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 
 <footer>
   © 2026 Najib Nasery
