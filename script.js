@@ -1,86 +1,249 @@
-const links = document.querySelectorAll('[data-section]');
-const sections = document.querySelectorAll('.section');
-
-function activateSection(id) {
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
-
-  links.forEach(link => link.classList.remove('active'));
-
-  const target = document.getElementById(id);
-  target.classList.add('active');
-
-  document
-    .querySelectorAll(`[data-section="${id}"]`)
-    .forEach(link => link.classList.add('active'));
-
-  target.scrollIntoView({ behavior: 'smooth' });
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-links.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    activateSection(link.dataset.section);
-  });
-});
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f6f8fb;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #2563eb;
+}
+
+.logo-box img {
+  height: 40px;   /* control size here */
+  width: auto;    /* keeps aspect ratio */
+  display: block;
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  padding: 5rem 2rem 4rem;
+}
+
+.section ul {
+  padding-left: 1.2rem;   /* smaller than default */
+  margin-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+}
+
+.section h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section h3 {
+  margin-bottom: 0.5rem;
+}
+
+.section.active {
+  display: block;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 950px;   /* was 1100 */
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;  /* add side breathing room */
+}
+
+/* HERO */
+.hero-section {
+  padding: 3rem 0;
+}
+
+.hero {
+  background: #0f172a;
+  color: white;
+
+  padding: 4rem 3rem;
+  border-radius: 18px;
+
+  max-width: 800px;
+  margin: 0 auto;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-section {
+  padding: 5rem 2rem;
+}
 
 
-document.addEventListener("DOMContentLoaded", function () {
+.badge {
+  display: inline-block;
+  background: #1e293b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
 
-  const button = document.getElementById("downloadPdf");
-  const cv = document.getElementById("cv");
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-  if (!button || !cv) {
-    console.error("Button or CV section not found.");
-    return;
-  }
+.hero-buttons {
+  margin-top: 2rem;
+}
 
-  button.addEventListener("click", function () {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+/* BUTTONS */
+button {
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
 
-    const elements = cv.querySelectorAll("h2, h3, p, li");
+button.primary {
+  background: #2563eb;
+  color: white;
+  margin-right: 1rem;
+}
 
-    const marginLeft = 20;
-    const maxWidth = doc.internal.pageSize.getWidth() - 40;
-    let y = 20;
-
-    elements.forEach(el => {
-      let text = el.innerText.trim();
-      if (!text) return;
-
-      if (el.tagName === "H2") {
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(18);
-        y += 10;
-      } else if (el.tagName === "H3") {
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(14);
-        y += 6;
-      } else {
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(12);
-      }
-
-      if (el.tagName === "LI") {
-        text = "• " + text;
-      }
-
-      const lines = doc.splitTextToSize(text, maxWidth);
-      doc.text(lines, marginLeft, y);
-
-      y += lines.length * 6 + 4;
-
-      if (y > 270) {
-        doc.addPage();
-        y = 20;
-      }
-    });
-
-    doc.save("NajibNasery-CV.pdf");
-  });
-
-});
+.hero button.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid #ffffff55;
+}
 
 
+/* CARDS */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+/* LAYOUTS */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* ABOUT */
+.about-main {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-photo {
+  background: #e5e7eb;
+  height: 160px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.about-content h3,
+.about-content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-block {
+  margin-top: 1.5rem;
+}
+
+/* FORMS */
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.project-actions button,
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Ensure project buttons are visible */
+.project-actions a,
+.project-actions button {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  border: none;
+}
+
+/* Primary (Live) still wins */
+.project-actions .primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
