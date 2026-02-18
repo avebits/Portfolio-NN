@@ -1,3 +1,14 @@
+/*
+  Project: Webdesign 001
+  File: styles.css
+  Author: Knut-Erik Skatvedt
+  Created: 2026-02-18
+  Description:
+    Global styles and layout rules for the webdesign.
+  Notes:
+    - A test design for a customer.
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -247,3 +258,4 @@ footer {
   background-color: #2563eb;
   color: #ffffff;
 }
+
