@@ -11,7 +11,9 @@
  *   - 
  */
 
-
+/**
+ * This is the collapsable section
+ */
 const links = document.querySelectorAll('[data-section]');
 const sections = document.querySelectorAll('.section');
 
@@ -40,6 +42,9 @@ links.forEach(link => {
 });
 
 
+/**
+ * This is the jsPDF conversion part
+ */
 document.addEventListener("DOMContentLoaded", function () {
 
   const button = document.getElementById("downloadPdf");
@@ -98,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/**
+ * This is the contact form for mailto:
+ */
 document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contactForm");
@@ -126,5 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
 
