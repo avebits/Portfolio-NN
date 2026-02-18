@@ -5,7 +5,7 @@
  * Created: 2026-02-18
  * Description:
  *   Handles interactive behavior and dynamic functionality, in this case 3 things:
- *   Collapsable sections, jsPDF, and simple mailto:
+ *   Collapsable sections, jsPDF with simple formatting, and simple mailto:
  *
  * Notes:
  *   - 
@@ -126,4 +126,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
