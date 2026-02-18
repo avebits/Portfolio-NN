@@ -1,3 +1,17 @@
+/**
+ * Project: Webdesign 001
+ * File: script.js
+ * Author: Knut-Erik Skatvedt
+ * Created: 2026-02-18
+ * Description:
+ *   Handles interactive behavior and dynamic functionality, in this case 3 things:
+ *   Collapsable sections, jsPDF, and simple mailto:
+ *
+ * Notes:
+ *   - 
+ */
+
+
 const links = document.querySelectorAll('[data-section]');
 const sections = document.querySelectorAll('.section');
 
@@ -112,3 +126,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
