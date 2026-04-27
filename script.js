@@ -1,7 +1,7 @@
 /**
  * Project: Webdesign 001
  * File: script.js
- * Author: Knut-Erik Skatvedt
+ * Author: -
  * Created: 2026-02-18
  * Description:
  *   Handles interactive behavior and dynamic functionality, in this case 3 things:
